@@ -1,0 +1,32 @@
+.letter{
+  text-align: center;
+}
+.container{
+  display: flex;
+  flex-flow: row;
+  /*position: absolute;*/
+}
+.one, .two{
+  flex: 0 0 46%;
+  border: 2px solid black;
+  height: auto;
+}
+.one{
+
+  background-color: lightblue;
+  padding: 10px;
+}
+.two{
+  background-color: lightyellow;
+  padding: 10px;
+}
+
+#friend .allChatByMe, #me .allChatByMe{
+  float: right;
+  clear: both;
+}
+
+#friend .allChat, #me .allChat{
+  float: left;
+  clear: both;
+}
