@@ -1,31 +1,57 @@
+body{
+  position:absolute; top:0; bottom:0; right:0; left:0;
+  margin:0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+}
 .letter{
   text-align: center;
 }
 .container{
   display: flex;
   flex-flow: row;
-  /*position: absolute;*/
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 0 10% 20px 10%;
+  padding: 0;
+}
+.container *{
+  flex: 1 1 auto;
 }
 .one, .two{
-  flex: 0 0 46%;
-  border: 2px solid black;
+  flex: 0 0 44%;
+  border: 0px solid black;
   height: auto;
 }
 .one{
-
   background-color: lightblue;
   padding: 10px;
+  margin-right: 50px;
+}
+#sendByFriend, #sendByMe{
+  position: absolute;
+  bottom: 30px;
+  width: 23%;
+  height: 35px;
+}
+.friendButton, .meButton{
+  position: absolute;
+  bottom: 30px;
+  margin-left: 25%;
+  height: 30px;
+  width: 7%;
+  border-radius: 10px;
 }
 .two{
   background-color: lightyellow;
   padding: 10px;
+  margin-left: 40px;
 }
-
 #friend .allChatByMe, #me .allChatByMe{
   float: right;
   clear: both;
 }
-
 #friend .allChat, #me .allChat{
   float: left;
   clear: both;
