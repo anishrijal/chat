@@ -29,8 +29,6 @@ body{
   background-color: lightblue;
   padding: 10px;
   margin-right: 50px;
-  overflow-y: scroll;
-  /*height: 700px;*/
 }
 #sendByFriend, #sendByMe{
   position: absolute;
@@ -52,10 +50,92 @@ body{
   margin-left: 40px;
 }
 #friend .allChatByMe, #me .allChatByMe{
-  float: right;
-  clear: both;
-}
-#friend .allChat, #me .allChat{
   float: left;
   clear: both;
 }
+#friend .allChat, #me .allChat{
+  float: right;
+  clear: both;
+}
+.allChat
+  {
+  display: inline-block;
+  max-width: 200px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  }
+
+.allChat:after
+  {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -8.5px;
+    top: 7px;
+    height: 0px;
+    width: 0px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid white;
+  }
+
+  .allChat:before
+  {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -9px;
+    top: 7px;
+    height: 0px;
+    width: 0px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid black;
+  }
+
+.allChatByMe
+  {
+  display: inline-block;
+  max-width: 200px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  }
+
+.allChatByMe:after
+  {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -8px;
+  top: 6px;
+  height: 0px;
+  width: 0px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #dbedfe;
+  }
+
+.allChatByMe:before
+  {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -9px;
+  top: 6px;
+  height: 0px;
+  width: 0px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid black;
+  }
